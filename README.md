@@ -1,5 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/6WBLNv7l)
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)  (https://classroom.github.com/a/6WBLNv7l)
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11231929&assignment_repo_type=AssignmentRepo)
 # Final Project Starter Files / 기말 프로젝트 시작 파일
 
@@ -30,12 +28,6 @@ Each of these models has a controller, views for the CRUD operations, and a seed
         - show.ejs  // 세부 정보 보기
 - data/seedSubscribers.js // 몽고 DB에 데이터를 채우는 데 사용되는 데이터
 ```
-
-Your task is to **create ONE more model, controller, views, and seedData file.**<br>
-당신의 과제는 **하나의 모델, 컨트롤러, 뷰 및 seedData 파일을 더 만드는 것입니다.**
-
-This sample project introduces a `Talks` and a `Trains` MVC structure.<br>
-이 샘플 프로젝트는 `Talks` 및 `Trains` MVC 구조를 소개합니다.
 
 ## Basic Requirements / 기본 요구사항
 
