@@ -1,0 +1,64 @@
+<main class="">
+  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="pt-5">
+      <h1>Add New Music</h1>
+      <p>What will you teach today?</p>
+
+      <div class="row">
+        <div class="col-lg-6 mb-3 mt-3">
+          <div class="data-form">
+            <form class="form-signin" action="/music" method="POST">
+              <h2 class="form-signin-heading">Create a new music:</h2>
+              <label for="inputName">Music name</label>
+              <input
+                type="text"
+                name="name"
+                id="inputName"
+                class="form-control"
+                placeholder="Name"
+                autofocus
+              />
+              <label for="inputGenre">Genre</label>
+              <input
+                type="text"
+                name="genre"
+                id="inputGenre"
+                class="form-control"
+                placeholder="Genre"
+              />
+              <label for="Singer">Singer</label>
+              <input
+                type="text"
+                name="singer"
+                id="Singer"
+                class="form-control"
+                placeholder="Singer"
+              />
+              <label for="inputSonglength">songlength</label>
+              <input
+                type="text"
+                name="songlength"
+                id="inputSonglength"
+                pattern="\d*"
+                class="form-control"
+                placeholder="Songlength"
+                required
+              />
+              <br /><button class="btn btn-lg ut-red" type="submit">
+                Create Music
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center text-lg-start mb-3 mt-5">
+          <figure>
+            <img
+              src="https://cdn.pixabay.com/photo/2018/03/01/07/22/education-3189934_960_720.jpg"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,33 @@
+<ul id="messages"></ul>
+<form id="chat-form" action="">
+  <div class="d-flex">
+    <input
+      class="form-control"
+      id="chat-input"
+      autocomplete="off"
+      style="width: 300px"
+    /><button class="btn btn-success">Send</button>
+  </div>
+</form>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+
+  // 메시지 수신 처리
+  socket.on("chat message", (msg) => {
+    const item = document.createElement("li");
+    item.textContent = msg;
+    document.getElementById("messages").appendChild(item);
+  });
+
+  // 폼 제출 처리
+  document.getElementById("chat-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const input = document.getElementById("chat-input");
+    const msg = input.value;
+    input.value = "";
+    socket.emit("chat message", msg);
+    return false;
+  });
+</script>

@@ -1,0 +1,56 @@
+<div class="data-form">
+  <form
+    class="form-signin"
+    action="<%=`/music/${music._id}/update?_method=PUT`%>"
+    method="POST"
+  >
+    <h2 class="form-signin-heading">Edit Music:</h2>
+    <label for="inputTitle">Music Name</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      class="form-control"
+      value="<%= music.name %>"
+      placeholder="name"
+      autofocus
+    />
+    <label for="genre">Genre</label>
+    <input
+      type="text"
+      name="genre"
+      id="genre"
+      class="form-control"
+      value="<%= music.genre %>"
+      placeholder="Genre"
+    />
+    <label for="singer">Singer</label>
+    <input
+      type="text"
+      name="singer"
+      id="singer"
+      class="form-control"
+      value="<%= music.singer%>"
+      placeholder="singer"
+      required
+    />
+    <label for="songlength">Length</label>
+    <input
+      type="text"
+      name="songlength"
+      id="songlength"
+      pattern="\d*"
+      class="form-control"
+      value="<%= music.songlength %>"
+      placeholder="songlength"
+      required
+    />
+    <br /><button
+      class="but btnedit"
+      type="submit"
+      style="margin: 0px; width: 100px"
+    >
+      Save
+    </button>
+  </form>
+</div>

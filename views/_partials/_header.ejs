@@ -1,0 +1,48 @@
+<!-- views/partials/header.ejs -->
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <div
+      class="container-left d-flex justify-content-between align-items-center"
+    >
+      <!-- 로고 -->
+      <figure class="logo">
+        <a href="/">
+          🚈
+          <h1 class="site-title">
+            <span class="ut-red">UT</span>-NodeJS 최종 프로젝트
+          </h1>
+        </a>
+      </figure>
+
+      <!-- 메뉴 -->
+      <%- include('_navigation.ejs') %>
+      <!-- <div class="btn btn-success" style="padding: 10px 50px 10px 50px">
+        <a href="/chat" class="text-white text-decoration-none">채팅</a>
+      </div> -->
+      <button class="btnlogin">
+        <span
+          ><a href="/chat" class="text-white text-decoration-none"
+            >Chatting</a
+          ></span
+        >
+      </button>
+
+      <% if (loggedIn) { %> Logged in
+      <a href="<%=`/users/${currentUser._id}`%>"><%= currentUser.fullName %></a>
+
+      <a class="btn ut-red" role="button" href="/users/logout">Logout</a>
+
+      <%} else {%>
+      <button class="btnlogin">
+        <span
+          ><a href="/users/login" class="text-white text-decoration-none"
+            >Login</a
+          ></span
+        >
+      </button>
+      <% } %>
+    </div>
+  </div>
+</header>

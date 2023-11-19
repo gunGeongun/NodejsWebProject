@@ -1,0 +1,40 @@
+<h1 class="center"><%= music.name %></h1>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <td><%= music.name %></td>
+  </tr>
+  <tr>
+    <th>Genre</th>
+    <td><%= music.genre%></td>
+  </tr>
+  <tr>
+    <th>Singer</th>
+    <td><%= music.singer%></td>
+  </tr>
+  <tr>
+    <th>Songlength</th>
+    <td><%= music.songlength%> sec</td>
+  </tr>
+</table>
+
+<div class="d-flex">
+  <div style="margin-top: 20px">
+    <a class="but btnedit" role="button" href="<%=`/music/${music._id}/edit`%>"
+      >Edit Music Details</a
+    >
+  </div>
+  <div style="margin-top: 20px">
+    <a class="but btnedit" role="button" href="/music">View all musics</a>
+  </div>
+  <div style="margin-top: 20px">
+    <a
+      class="but btndelete"
+      role="button"
+      href="<%= `/music/${music._id}/delete?_method=DELETE` %>"
+      onclick="return confirm('Are you sure you want to delete this record?')"
+      >Delete</a
+    >
+  </div>
+</div>

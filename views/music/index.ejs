@@ -1,0 +1,80 @@
+<head>
+  <style>
+    .pastel {
+      background: url(https://i1.wp.com/zeevector.com/wp-content/uploads/Cute-Pastel-Background.png?fit=1937%2C1341&ssl=1)
+        no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      z-index: -1;
+    }
+  </style>
+</head>
+<main class="pastel">
+  <div class="container col-xl-10 col-xxl-8">
+    <div class="fading">
+      <h1>Music</h1>
+    </div>
+    <div class="pt-3 pb-5">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Genre</th>
+            <th>Singer</th>
+            <th>SongLength</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% music.forEach(song => { %>
+          <tr>
+            <td>
+              <a href="<%= `/music/${song._id}` %>"> <%= song.name %> </a>
+            </td>
+            <td><%= song.genre %></td>
+            <td><%= song.singer %></td>
+            <td><%= song.songlength %> sec</td>
+            <td>
+              <a
+                class="but btnedit"
+                role="button"
+                href="<%=`music/${song._id}/edit`%>"
+                style="margin: 0px"
+                >Edit</a
+              >
+            </td>
+            <td>
+              <a
+                class="but btndelete"
+                role="button"
+                href="<%= `music/${song._id}/delete?_method=DELETE` %>"
+                onclick="return confirm('Are you sure you want to delete this record?')"
+                style="margin: 0px"
+                >Delete</a
+              >
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+      <div class="mt-5 text-center">
+        <a href="/music/new" class="btn btn-primary">Add New Music</a>
+        <a
+          href="/music/deleteAll?_method=DELETE"
+          class="btn ut-red"
+          role="button"
+          >Delete All Music</a
+        >
+      </div>
+    </div>
+  </div>
+</main>
